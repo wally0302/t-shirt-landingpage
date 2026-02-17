@@ -14,11 +14,13 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background:
-    radial-gradient(circle at 20% 18%, rgba(113, 82, 243, 0.18), transparent 38%),
-    radial-gradient(circle at 82% 14%, rgba(8, 180, 180, 0.18), transparent 36%),
-    linear-gradient(180deg, #fdfcff 0%, var(--color-bg) 100%);
-  font-family: var(--font-body), sans-serif;
+    radial-gradient(circle at 16% 10%, rgba(202, 138, 4, 0.2), transparent 38%),
+    radial-gradient(circle at 82% 16%, rgba(28, 25, 23, 0.16), transparent 34%),
+    radial-gradient(circle at 70% 80%, rgba(174, 124, 24, 0.12), transparent 42%),
+    linear-gradient(180deg, #fffcf7 0%, var(--color-bg) 56%, #ece3d4 100%);
+  font-family: var(--font-body), var(--font-cjk), sans-serif;
   line-height: 1.6;
+  letter-spacing: 0.015em;
 }
 
 a {

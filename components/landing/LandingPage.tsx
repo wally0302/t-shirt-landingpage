@@ -79,30 +79,38 @@ export default function LandingPage() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
-        <div className={styles.heroLabel}>Wardrobe / 衣櫥</div>
-        <h1 className={styles.heroTitle}>把你的衣櫥，變成可搜尋的數位空間</h1>
-        <p className={styles.heroSubtitle}>
-          Wardrobe / 衣櫥 讓你快速上傳、整理、查找衣物，出門前還能同步查看天氣。
-        </p>
-        <div className={styles.heroActions}>
-          <a
-            className={styles.primaryButton}
-            href={siteConfig.loginUrl}
-            onClick={() => trackEvent("landing_click_primary_cta", { source: "hero" })}
-          >
-            開始整理衣櫥
-          </a>
-          <a
-            className={styles.secondaryButton}
-            href="#features"
-            onClick={() => trackEvent("landing_click_secondary_cta", { source: "hero" })}
-          >
-            看功能亮點
-          </a>
+        <div className={styles.heroGlow} aria-hidden />
+        <div className={styles.heroContent}>
+          <div className={styles.heroLabel}>Wardrobe / 衣櫥</div>
+          <h1 className={styles.heroTitle}>把你的衣櫥，變成可搜尋的數位空間</h1>
+          <p className={styles.heroSubtitle}>
+            Wardrobe / 衣櫥 讓你快速上傳、整理、查找衣物，出門前還能同步查看天氣。
+          </p>
+          <div className={styles.heroActions}>
+            <a
+              className={styles.primaryButton}
+              href={siteConfig.loginUrl}
+              onClick={() => trackEvent("landing_click_primary_cta", { source: "hero" })}
+            >
+              開始整理衣櫥
+            </a>
+            <a
+              className={styles.secondaryButton}
+              href="#features"
+              onClick={() => trackEvent("landing_click_secondary_cta", { source: "hero" })}
+            >
+              看功能亮點
+            </a>
+          </div>
+        </div>
+        <div className={styles.heroVisual} aria-hidden>
+          <div className={styles.heroVisualPanel} />
+          <div className={styles.heroVisualOrb} />
+          <div className={`${styles.heroVisualOrb} ${styles.heroVisualOrbSecondary}`} />
         </div>
       </header>
 
-      <section className={styles.section} aria-labelledby="problem-solution-title">
+      <section className={`${styles.section} ${styles.storySection}`} aria-labelledby="problem-solution-title">
         <h2 id="problem-solution-title" className={styles.sectionTitle}>
           先解決你每天出門前最卡的三件事
         </h2>
@@ -126,7 +134,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="features" className={styles.section} aria-labelledby="features-title">
+      <section id="features" className={`${styles.section} ${styles.showcaseSection}`} aria-labelledby="features-title">
         <h2 id="features-title" className={styles.sectionTitle}>
           功能亮點
         </h2>
@@ -148,7 +156,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="how-it-works" className={styles.section} aria-labelledby="how-title">
+      <section id="how-it-works" className={`${styles.section} ${styles.storySection}`} aria-labelledby="how-title">
         <h2 id="how-title" className={styles.sectionTitle}>
           How It Works
         </h2>
@@ -168,7 +176,7 @@ export default function LandingPage() {
         </ol>
       </section>
 
-      <section className={styles.section} aria-labelledby="content-preview-title">
+      <section className={`${styles.section} ${styles.valuesSection}`} aria-labelledby="content-preview-title">
         <h2 id="content-preview-title" className={styles.sectionTitle}>
           穿搭指南（即將上線）
         </h2>
@@ -191,7 +199,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="faq" className={styles.section} aria-labelledby="faq-title">
+      <section id="faq" className={`${styles.section} ${styles.faqSection}`} aria-labelledby="faq-title">
         <h2 id="faq-title" className={styles.sectionTitle}>
           FAQ
         </h2>

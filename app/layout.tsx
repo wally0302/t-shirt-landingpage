@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Noto_Sans_TC, Space_Grotesk } from "next/font/google";
+import { Cormorant, Montserrat, Noto_Sans_TC } from "next/font/google";
 
 import "./globals.css";
 import { siteConfig, toAbsoluteUrl } from "@/lib/site-config";
 
-const bodyFont = Noto_Sans_TC({
+const bodyFont = Montserrat({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"]
+  weight: ["300", "400", "500", "600", "700"]
 });
 
-const displayFont = Space_Grotesk({
+const displayFont = Cormorant({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "700"]
+  weight: ["400", "500", "600", "700"]
+});
+
+const cjkFont = Noto_Sans_TC({
+  variable: "--font-cjk",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"]
 });
 
 const siteTitle = "Wardrobe / 衣櫥｜你的數位穿搭管理工具";
@@ -61,7 +67,7 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
-    <html lang="zh-Hant" className={`${bodyFont.variable} ${displayFont.variable}`}>
+    <html lang="zh-Hant" className={`${bodyFont.variable} ${displayFont.variable} ${cjkFont.variable}`}>
       <body>
         {children}
         {gaId ? (
