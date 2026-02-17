@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="80" x2="1120" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F3FF"/>
+      <stop offset="1" stop-color="#EDE7FF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="220" y1="210" x2="950" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7152F3" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#08B4B4" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="120" y="100" width="960" height="430" rx="32" fill="white" stroke="#DCCFFF" stroke-width="2"/>
+  <rect x="180" y="170" width="840" height="290" rx="24" fill="url(#card)"/>
+  <text x="190" y="255" fill="#5A3EE0" font-family="Arial, sans-serif" font-size="36" font-weight="700">Wardrobe / 衣櫥</text>
+  <text x="190" y="325" fill="#211A38" font-family="Arial, sans-serif" font-size="64" font-weight="700">把你的衣櫥，</text>
+  <text x="190" y="392" fill="#211A38" font-family="Arial, sans-serif" font-size="64" font-weight="700">變成可搜尋的數位空間</text>
+  <text x="190" y="448" fill="#554C75" font-family="Arial, sans-serif" font-size="28">快速上傳、整理、查找衣物，出門前同步看天氣</text>
+</svg>

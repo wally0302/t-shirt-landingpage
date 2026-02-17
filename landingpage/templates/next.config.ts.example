@@ -1,0 +1,21 @@
+import type { NextConfig } from "next";
+
+// If deploying as https://<user>.github.io/<repo>, set repo to repository name.
+// If deploying as https://<user>.github.io, leave repo empty string.
+const repo = "wardrobe-landing";
+const isProjectSite = repo.length > 0;
+
+const nextConfig: NextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  ...(isProjectSite
+    ? {
+        basePath: `/${repo}`,
+        assetPrefix: `/${repo}/`,
+      }
+    : {}),
+};
+
+export default nextConfig;
